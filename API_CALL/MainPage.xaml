@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="API_CALL.MainPage">
+
+    <StackLayout Margin="20,35,20,20">
+        <Button Text="Get Data" Clicked="Button_Clicked" />
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" FontSize="Medium" />
+                        <Label Text="{Binding Description}" TextColor="White" FontSize="Small" />
+                        <Label Text="{Binding HomeUrl}" TextColor="Red" FontSize="Caption" />
+
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>
